@@ -26,7 +26,7 @@ namespace SelfHost
 
                 ServiceEndpoint NettcpEndpoint1 = servicehost.AddServiceEndpoint(typeof(IMathService),
                     new NetTcpBinding(),
-                    "http://localhost:6666/MathService");
+                    "net.tcp://localhost:6666/MathService");
 
                 servicehost.Open();
 
@@ -37,7 +37,7 @@ namespace SelfHost
                 foreach( ServiceEndpoint endpoint in servicehost.Description.Endpoints)
                 {
                     Console.WriteLine("Address : {0} Binding Name : {1}",
-                    BasicHttpEndpoint1.Address.ToString(), BasicHttpEndpoint1.Binding.Name);
+                    endpoint.Address.ToString(), endpoint.Binding.Name);
                 }
                 Console.WriteLine();
                 Console.WriteLine("Press any key to stop your WCF Math service");
