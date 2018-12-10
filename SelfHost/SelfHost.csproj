@@ -55,11 +55,5 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MathfServiceLibraryDemo\MathfServiceLibrary\MathfServiceLibrary.csproj">
-      <Project>{f7f2dc5d-d2fe-4f0d-9537-c2f0c36af0a9}</Project>
-      <Name>MathfServiceLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
