@@ -4,14 +4,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHost", "SelfHost\SelfHost.csproj", "{AB8055BA-079B-4929-B82F-8DE6A6347122}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8} = {0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsClient1", "WindowsClient1\WindowsClient1.csproj", "{7EA47F62-BB1B-45E2-A125-34A9FC19D41E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8} = {0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsClient2", "WindowsClient2\WindowsClient2.csproj", "{696FA9DE-D684-43D8-877A-E6D2AF2D46B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsClient3", "WindowsClient3\WindowsClient3.csproj", "{04C5B399-6139-411D-9581-A6336595A5F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathfServiceLibrary", "MathfServiceLibrary\MathfServiceLibrary.csproj", "{F7F2DC5D-D2FE-4F0D-9537-C2F0C36AF0A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathServiceLibrary", "MathServiceLibrary\MathServiceLibrary.csproj", "{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +41,10 @@ Global
 		{04C5B399-6139-411D-9581-A6336595A5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04C5B399-6139-411D-9581-A6336595A5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04C5B399-6139-411D-9581-A6336595A5F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7F2DC5D-D2FE-4F0D-9537-C2F0C36AF0A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7F2DC5D-D2FE-4F0D-9537-C2F0C36AF0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7F2DC5D-D2FE-4F0D-9537-C2F0C36AF0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7F2DC5D-D2FE-4F0D-9537-C2F0C36AF0A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F27DE93-FBF9-4D7A-AA65-7780E338F8B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

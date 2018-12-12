@@ -7,40 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MathfServiceLibrary;
+using MathServiceLibrary;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
 namespace WindowsClient1
 {
-    public partial class Form1 : Form
+    public partial class FormClient1 : Form
     {
         private IMathService channel = null;
-        public Form1()
+
+        public FormClient1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             var endPoint = new EndpointAddress("http://localhost:4444/MathService");
 
             channel = ChannelFactory<IMathService>.CreateChannel(new BasicHttpBinding(), endPoint);
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            MathServiceReference.MyNumbers obj = new MathServiceReference.MyNumbers();
+            MyNumbers obj = new MyNumbers();
             obj.Number1 = Convert.ToInt32(textBox1.Text);
             obj.Number2 = Convert.ToInt32(textBox2.Text);
-            textBox3.Text = proxy.Add(obj).ToString();
+            textBox3.Text = channel.Add(obj).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MathServiceReference.MyNumbers obj = new MathServiceReference.MyNumbers();
+            MyNumbers obj = new MyNumbers();
             obj.Number1 = Convert.ToInt32(textBox1.Text);
             obj.Number2 = Convert.ToInt32(textBox2.Text);
-            textBox3.Text = proxy.Subtract(obj).ToString();
+            textBox3.Text = channel.Subtract(obj).ToString();
         }
+
+        
     }
 }

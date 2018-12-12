@@ -1,6 +1,6 @@
 ﻿namespace WindowsClient2
 {
-    partial class Form1
+    partial class FormClient2
     {
         /// <summary>
         /// Required designer variable.
@@ -67,6 +67,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Subtract";
             this.button2.UseVisualStyleBackColor = true;
+            
             // 
             // button1
             // 
